@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "scope": "Classification based solely on README.md and high-level project description",
+    "instructions": "Only select labels that can be reasonably inferred from README text. Use UNKNOWN if unclear."
+  },
+
+  "classification": {
+    "project_context": {
+      "project_type": {
+        "question": "What kind of project is this, based on the README?",
+        "allowed_values": [
+          "HOBBY_PERSONAL",
+          "OPEN_SOURCE_PROJECT",
+          "STARTUP_PRODUCT",
+          "ENTERPRISE_INTERNAL",
+          "ENTERPRISE_PRODUCT",
+          "TEMPLATE_EXAMPLE",
+          "UNKNOWN"
+        ]
+      },
+
+      "intended_usage": {
+        "question": "What is the intended usage of this project?",
+        "allowed_values": [
+          "INTERNAL_TOOL",
+          "CUSTOMER_FACING_PRODUCT",
+          "AUTOMATION_WORKFLOW_COLLECTION",
+          "PLATFORM_COMPONENT",
+          "EXAMPLE_DEMO",
+          "UNKNOWN"
+        ]
+      }
+    },
+
+    "business_orientation": {
+      "market_type": {
+        "question": "Which market does this software primarily target?",
+        "allowed_values": [
+          "B2B",
+          "B2C",
+          "B2B2C",
+          "DEVELOPER_TOOLS",
+          "INTERNAL_OPERATIONS",
+          "UNKNOWN"
+        ]
+      },
+
+      "business_domain_language": {
+        "question": "Does the README use business-oriented language suggesting a commercial or organizational context?",
+        "allowed_values": [
+          "STRONGLY_BUSINESS_ORIENTED",
+          "MIXED_TECH_AND_BUSINESS",
+          "PURELY_TECHNICAL",
+          "UNKNOWN"
+        ]
+      }
+    },
+
+    "software_domain": {
+      "primary_domain": {
+        "question": "What is the primary functional domain of the software?",
+        "allowed_values": [
+          "INTEGRATION_AUTOMATION",
+          "DATA_PIPELINES_ANALYTICS",
+          "AI_WORKFLOWS",
+          "BUSINESS_OPERATIONS",
+          "CUSTOMER_EXPERIENCE",
+          "DEVOPS_PLATFORM",
+          "E_COMMERCE",
+          "FINTECH_PAYMENTS",
+          "HEALTHCARE",
+          "EDTECH",
+          "IOT_INDUSTRY",
+          "OTHER",
+          "UNKNOWN"
+        ]
+      },
+
+      "secondary_domains": {
+        "question": "Are there any secondary functional domains mentioned?",
+        "allowed_values": [
+          "INTEGRATION_AUTOMATION",
+          "DATA_PIPELINES_ANALYTICS",
+          "AI_WORKFLOWS",
+          "BUSINESS_OPERATIONS",
+          "CUSTOMER_EXPERIENCE",
+          "DEVOPS_PLATFORM",
+          "E_COMMERCE",
+          "FINTECH_PAYMENTS",
+          "HEALTHCARE",
+          "EDTECH",
+          "IOT_INDUSTRY",
+          "OTHER",
+          "NONE",
+          "UNKNOWN"
+        ],
+        "multi_select": true
+      }
+    },
+
+    "use_case_granularity": {
+      "granularity_level": {
+        "question": "How specific is the described use case?",
+        "allowed_values": [
+          "GENERIC_AUTOMATION_FRAMEWORK",
+          "DOMAIN_SPECIFIC_AUTOMATION",
+          "SINGLE_CLEAR_USE_CASE",
+          "MULTIPLE_DISTINCT_USE_CASES",
+          "UNKNOWN"
+        ]
+      },
+
+      "described_use_cases": {
+        "question": "Briefly list the concrete use cases explicitly mentioned in the README.",
+        "free_text": true,
+        "max_items": 5
+      }
+    },
+
+    "target_users": {
+      "primary_users": {
+        "question": "Who are the primary intended users of this software?",
+        "allowed_values": [
+          "ENGINEERS",
+          "DATA_TEAMS",
+          "OPS_IT",
+          "SALES_MARKETING",
+          "FINANCE",
+          "CUSTOMER_SUPPORT",
+          "FOUNDERS_GENERALISTS",
+          "NON_TECHNICAL_USERS",
+          "UNKNOWN"
+        ],
+        "multi_select": true
+      }
+    }
+  },
+
+  "explainability": {
+    "evidence_quotes": {
+      "question": "Provide short quotes or phrases from the README that justify the chosen categories.",
+      "free_text": true,
+      "max_items": 5
+    },
+
+    "confidence_overall": {
+      "question": "How confident are you in this classification based on the README alone?",
+      "allowed_range": [0.0, 1.0]
+    },
+
+    "uncertain_fields": {
+      "question": "Which fields could not be confidently determined from the README?",
+      "free_text": true,
+      "multi_select": true
+    }
+  }
+}

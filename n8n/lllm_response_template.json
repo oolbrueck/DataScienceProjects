@@ -1,0 +1,28 @@
+{
+  "classification": {
+    "project_context": {
+      "project_type": "",
+      "intended_usage": ""
+    },
+    "business_orientation": {
+      "market_type": "",
+      "business_domain_language": ""
+    },
+    "software_domain": {
+      "primary_domain": "",
+      "secondary_domains": []
+    },
+    "use_case_granularity": {
+      "granularity_level": "",
+      "described_use_cases": []
+    },
+    "target_users": {
+      "primary_users": []
+    }
+  },
+  "explainability": {
+    "evidence_quotes": [],
+    "confidence_overall": 0.0,
+    "uncertain_fields": []
+  }
+}
